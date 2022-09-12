@@ -1,9 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Dot Com Crashers </title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dot Com Crashers</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <style>
+            .active {
+                color: #7E57C2 !important;
+            }
+        </style>
+   </head>
   <body>
-    We're here to crash the World Wide Web!
+      <nav class="navbar navbar-expand-lg bg-light sticky-top">
+          <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav ms-auto">
+                      <a id="home-nav" class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a id="members-nav" class="nav-link" href="#">Members</a>
+                      <a id="resources-nav" class="nav-link" href="#">Resources</a>
+                      <a id="contact-nav" class="nav-link" href="#">Contact</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <div id="page-frame" class="container-fluid">
+          <div id="home-page" class="page container-fluid">
+              This is home page
+          </div>
+          <div id="members-page" class="page container-fluid">
+              This is members page
+          </div>
+          <div id="resources-page" class="page container-fluid">
+              This is resources page
+          </div>
+          <div id="contact-page" class="page container-fluid">
+              This is contact page
+          </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script>
+            $(".page").hide();
+            $("#home-page").show();
+            $("#home-nav").click( () => {
+                            $(".nav-link").removeClass("active");
+                            $("#home-nav").addClass("active");
+                            $(".page").hide();
+                            $("#home-page").show();
+                        });
+            $("#members-nav").click( () => {
+                            $(".nav-link").removeClass("active");
+                            $("#members-nav").addClass("active");
+                            $(".page").hide();
+                            $("#members-page").show();
+                        });
+            $("#resources-nav").click( () => {
+                            $(".nav-link").removeClass("active");
+                            $("#resources-nav").addClass("active");
+                            $(".page").hide();
+                            $("#resources-page").show();
+                        });
+            $("#contact-nav").click( () => {
+                            $(".nav-link").removeClass("active");
+                            $("#contact-nav").addClass("active");
+                            $(".page").hide();
+                            $("#contact-page").show();
+                        });
+        </script>
   </body>
 </html>
