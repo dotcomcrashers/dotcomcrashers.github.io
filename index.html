@@ -13,26 +13,32 @@
             body {
                 font-family: "Roboto", sans-serif; 
             }
+
             .active {
                 color: #7E57C2 !important;
             }
+
             #page-frame {
                 height: 100vh;
                 width: 100vw;
             }
+
             .page {
                 display: none;
                 height: 100%;
                 width: 100%;
             }
-            #project-title, #resources-title, #members-title, #contacts-title {
+
+            .page-title {
                 font-size: 9vw;
                 font-weight: bolder;
             }
+
             .page-content {
                 color: #546E7A;
                 font-size: 2vw;
             }
+
             .resources-content {
                 color: #546E7A;
                 font-size: 5vw;
@@ -40,25 +46,28 @@
                 position: relative;
                 top: 8vh;
             }
+
             #members-table {
                 position: relative;
                 top: 8vh;
             }
+
             #members-table tr:hover {
                 cursor: pointer;
             }
+
             #members-table td {
                 color: #546E7A;
                 text-align: center;
                 font-size: 3vh;
             }
-            /*
+
             .btn {
-                width: 15vw;
+                width: 18vw;
                 height: 6vw;
                 font-size: 2vw;
             }
-             */
+
             .btn-primary {
                 background-color: #7E57C2 !important;
             }
@@ -82,12 +91,12 @@
       </nav>
       <div id="page-frame" class="container">
           <div id="home-page" class="page ml-auto mr-auto mt-auto mb-auto container-fluid">
-              <h1 id="project-title" class="text-center p-4">NITC Student Hub</h1>
+              <h1 id="project-title" class="page-title text-center p-4">NITC Student Hub</h1>
               <p class="page-content p-4 text-justify">Where students can list items for sale and find a right buyer. They can also list lost items and anyone who has found or seen it somewhere can help the concerned to find the same.</p>
-              <button type="button" class="btn btn-primary m-4 px-4 py-3 rounded-pill">Learn More</button>
+              <button type="button" class="btn btn-primary m-4 rounded-pill">Learn More</button>
           </div>
           <div id="members-page" class="page container-fluid">
-            <h1 id="members-title" class="text-center p-4">Members</h1>
+            <h1 id="members-title" class="page-title text-center p-4">Members</h1>
             <table class="table table-hover" id = "members-table">
                 <tbody>
                   <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/1gWJEVZLSsw1mVsJVaQNDDNDkkRfBEOVp/view?usp=drivesdk">
@@ -106,11 +115,11 @@
             </table>
           </div>
           <div id="resources-page" class="page container-fluid">
-            <h1 id="resources-title" class="text-center p-4">Resources</h1>
+            <h1 id="resources-title" class="page-title text-center p-4">Resources</h1>
             <p class="resources-content">Coming Soon!</p>
           </div>
           <div id="contact-page" class="page container-fluid">
-            <h1 id="contacts-title" class="text-center p-4">Contacts</h1>
+            <h1 id="contacts-title" class="page-title text-center p-4">Contacts</h1>
           </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
