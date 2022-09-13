@@ -1,164 +1,223 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dot Com Crashers</title>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <style>
-            body {
-                font-family: "Roboto", sans-serif; 
-            }
 
-            .active {
-                color: #7E57C2 !important;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dot Com Crashers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
 
-            #page-frame {
-                height: calc(100vh - 5vw);
-                width: 100vw;
-            }
+        .active {
+            color: #7E57C2 !important;
+        }
 
-            .page {
-                display: none;
-                height: 100%;
-                width: 100%;
-            }
+        #page-frame {
+            height: calc(100vh - 5vw);
+            width: 100vw;
+        }
 
-            .page-title {
-                font-size: 9vw;
-                font-weight: bolder;
-            }
+        .page {
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
 
-            .page-content {
-                color: #546E7A;
-                font-size: 2vw;
-            }
+        .page-title {
+            font-size: 9vw;
+            font-weight: bolder;
+        }
 
-            .resources-content {
-                color: #546E7A;
-                font-size: 5vw;
-                text-align: center;
-                position: relative;
-                top: 8vh;
-            }
+        .page-content {
+            color: #546E7A;
+            font-size: 2vw;
+        }
 
-            #members-table {
-                position: relative;
-                top: 8vh;
-            }
+        .resources-content {
+            color: #546E7A;
+            font-size: 5vw;
+            text-align: center;
+            position: relative;
+            top: 8vh;
+        }
 
-            #members-table tr:hover {
-                cursor: pointer;
-            }
+        #members-table {
+            position: relative;
+            top: 8vh;
+        }
 
-            #members-table td {
-                color: #546E7A;
-                text-align: center;
-                font-size: 3vh;
-            }
+        #members-table tr:hover {
+            cursor: pointer;
+        }
 
-            .btn {
-                width: 18vw;
-                height: 6vw;
-                font-size: 2vw;
-            }
+        #members-table td {
+            color: #546E7A;
+            text-align: center;
+            font-size: 3vh;
+        }
 
-            .btn-primary {
-                background-color: #7E57C2 !important;
-            }
-        </style>
-   </head>
-  <body>
-      <nav class="navbar navbar-expand-lg bg-light sticky-top">
-          <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav ms-auto">
-                      <a id="home-nav" class="nav-link active" aria-current="page" href="#">Home</a>
-                      <a id="members-nav" class="nav-link" href="#">Members</a>
-                      <a id="resources-nav" class="nav-link" href="#">Resources</a>
-                      <a id="contact-nav" class="nav-link" href="#">Contact</a>
-                  </div>
-              </div>
-          </div>
-      </nav>
-      <div id="page-frame" class="container">
-          <div id="home-page" class="page ml-auto mr-auto mt-auto mb-auto container-fluid">
-              <h1 id="project-title" class="page-title text-center p-4">NITC Student Hub</h1>
-              <p class="page-content p-4 text-justify">Where students can list items for sale and find a right buyer. They can also list lost items and anyone who has found or seen it somewhere can help the concerned to find the same.</p>
-              <button type="button" class="btn btn-primary m-4 rounded-pill">Learn More</button>
-          </div>
-          <div id="members-page" class="page container-fluid">
+        .btn {
+            width: 18vw;
+            height: 6vw;
+            font-size: 2vw;
+        }
+
+        .btn-primary {
+            background-color: #7E57C2 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a id="home-nav" class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a id="members-nav" class="nav-link" href="#">Members</a>
+                    <a id="resources-nav" class="nav-link" href="#">Resources</a>
+                    <a id="contact-nav" class="nav-link" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="page-frame" class="container">
+        <div id="home-page" class="page ml-auto mr-auto mt-auto mb-auto container-fluid">
+            <h1 id="project-title" class="page-title text-center p-4">NITC Student Hub</h1>
+            <p class="page-content p-4 text-justify">Where students can list items for sale and find a right buyer. They
+                can also list lost items and anyone who has found or seen it somewhere can help the concerned to find
+                the same.</p>
+            <button type="button" class="btn btn-primary m-4 rounded-pill">Learn More</button>
+        </div>
+        <div id="members-page" class="page container-fluid">
             <h1 id="members-title" class="page-title text-center p-4">Members</h1>
-            <table class="table table-hover" id = "members-table">
+            <table class="table table-hover" id="members-table">
                 <tbody>
-                  <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/1gWJEVZLSsw1mVsJVaQNDDNDkkRfBEOVp/view?usp=drivesdk">
-                    <td>Akash Wilson M</td> 
-                  </tr>
-                  <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/134e7bOOBOrqUwQ8xZVNU8TZxQNf8dy1M/view?usp=drivesdk">
-                    <td>Aravind I M</td>
-                  </tr>
-                  <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/1Ywxqglgtpxg1d0S1Bh305u83bbqf0yzk/view?usp=sharing">
-                    <td>Harimurali J</td>
-                  </tr>
-                  <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/1YBbs3DeBeCVGNx-xMJfPXdcU8RWk4vIk/view?usp=sharing">
-                    <td>Panesa Teja</td>
-                  </tr>
+                    <tr class="clickable-row"
+                        data-href="https://drive.google.com/file/d/1gWJEVZLSsw1mVsJVaQNDDNDkkRfBEOVp/view?usp=drivesdk">
+                        <td>Akash Wilson M</td>
+                    </tr>
+                    <tr class="clickable-row"
+                        data-href="https://drive.google.com/file/d/134e7bOOBOrqUwQ8xZVNU8TZxQNf8dy1M/view?usp=drivesdk">
+                        <td>Aravind I M</td>
+                    </tr>
+                    <tr class="clickable-row"
+                        data-href="https://drive.google.com/file/d/1Ywxqglgtpxg1d0S1Bh305u83bbqf0yzk/view?usp=sharing">
+                        <td>Harimurali J</td>
+                    </tr>
+                    <tr class="clickable-row"
+                        data-href="https://drive.google.com/file/d/1YBbs3DeBeCVGNx-xMJfPXdcU8RWk4vIk/view?usp=sharing">
+                        <td>Panesa Teja</td>
+                    </tr>
                 </tbody>
             </table>
-          </div>
-          <div id="resources-page" class="page container-fluid">
+        </div>
+        <div id="resources-page" class="page container-fluid">
             <h1 id="resources-title" class="page-title text-center p-4">Resources</h1>
             <p class="resources-content">Coming Soon!</p>
-          </div>
-          <div id="contact-page" class="page container-fluid">
+        </div>
+        <div id="contact-page" class="page container-fluid">
             <h1 id="contacts-title" class="page-title text-center p-4">Contacts</h1>
-          </div>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        <script>
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="favicon.png" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Akash Wilson M</h4>
+                            <a href="mailto:akash_b190532cs@nitc.ac.in" class="card-link" target=”_blank”>akash_b190532cs@nitc.ac.in</a>
+                            <a href="https://www.linkedin.com/in/akash-wilson-m-68b516190/" class="card-link" target=”_blank”>LinkedIn</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="favicon.png" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Aravind I M</h4>
+                            <a href="mailto:aravind_b180461cs@nitc.ac.in" class="card-link" target=”_blank”>aravind_b180461cs@nitc.ac.in</a>
+                            <a href="https://www.linkedin.com/in/aravind-i-m/" class="card-link" target=”_blank”>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="favicon.png" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Harimurali J</h4>
+                            <a href="mailto:harimurali_b190547cs@nitc.ac.in" class="card-link" target=”_blank”>harimurali_b190547cs@nitc.ac.in</a>
+                            <a href="https://www.linkedin.com/in/harimurali-j-410801190/" class="card-link" target=”_blank”>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="favicon.png" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Panesa Teja</h4>
+                            <a href="mailto:panasa_b191143@nitc.ac.in" class="card-link" target=”_blank”>panasa_b191143@nitc.ac.in</a>
+                            <a href="https://www.linkedin.com/in/panasa-teja-8663101b0/" class="card-link" target=”_blank”>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $("#home-page").show();
+        $("#home-nav").click(() => {
+            $(".nav-link").removeClass("active");
+            $("#home-nav").addClass("active");
+            $(".page").hide();
             $("#home-page").show();
-            $("#home-nav").click( () => {
-                            $(".nav-link").removeClass("active");
-                            $("#home-nav").addClass("active");
-                            $(".page").hide();
-                            $("#home-page").show();
-                            $(".navbar-collapse").collapse("hide");
-                        });
-            $("#members-nav").click( () => {
-                            $(".nav-link").removeClass("active");
-                            $("#members-nav").addClass("active");
-                            $(".page").hide();
-                            $("#members-page").show();
-                            $(".navbar-collapse").collapse("hide");
-                        });
-            $("#resources-nav").click( () => {
-                            $(".nav-link").removeClass("active");
-                            $("#resources-nav").addClass("active");
-                            $(".page").hide();
-                            $("#resources-page").show();
-                            $(".navbar-collapse").collapse("hide");
-                        });
-            $("#contact-nav").click( () => {
-                            $(".nav-link").removeClass("active");
-                            $("#contact-nav").addClass("active");
-                            $(".page").hide();
-                            $("#contact-page").show();
-                            $(".navbar-collapse").collapse("hide");
-                        });
-            $(".clickable-row").click(() => {
-                            //window.location = $(this).data("href");
-                            //window.open($(this).data("href"), 'targetWindow');
-                            window.open($(this).data("href"));
-                        });            
-        </script>
-  </body>
+            $(".navbar-collapse").collapse("hide");
+        });
+        $("#members-nav").click(() => {
+            $(".nav-link").removeClass("active");
+            $("#members-nav").addClass("active");
+            $(".page").hide();
+            $("#members-page").show();
+            $(".navbar-collapse").collapse("hide");
+        });
+        $("#resources-nav").click(() => {
+            $(".nav-link").removeClass("active");
+            $("#resources-nav").addClass("active");
+            $(".page").hide();
+            $("#resources-page").show();
+            $(".navbar-collapse").collapse("hide");
+        });
+        $("#contact-nav").click(() => {
+            $(".nav-link").removeClass("active");
+            $("#contact-nav").addClass("active");
+            $(".page").hide();
+            $("#contact-page").show();
+            $(".navbar-collapse").collapse("hide");
+        });
+        $(".clickable-row").click(() => {
+            //window.location = $(this).data("href");
+            //window.open($(this).data("href"), 'targetWindow');
+            window.open($(this).data("href"));
+        });            
+    </script>
+</body>
+
 </html>
