@@ -24,13 +24,32 @@
                 height: 100%;
                 width: 100%;
             }
-            #project-title {
+            #project-title, #resources-title, #members-title {
                 font-size: 9vw;
                 font-weight: bolder;
             }
             .page-content {
                 color: #546E7A;
                 font-size: 2vw;
+            }
+            .resources-content {
+                color: #546E7A;
+                font-size: 5vw;
+                text-align: center;
+                position: relative;
+                top: 8vh;
+            }
+            #members-table {
+                position: relative;
+                top: 8vh;
+            }
+            #members-table tr:hover {
+                cursor: pointer;
+            }
+            #members-table td {
+                color: #546E7A;
+                text-align: center;
+                font-size: 3vh;
             }
             /*
             .btn {
@@ -67,10 +86,27 @@
               <button type="button" class="btn btn-primary m-4 px-4 py-3 rounded-pill">Learn More</button>
           </div>
           <div id="members-page" class="page container-fluid">
-              This is members page
+            <h1 id="members-title" class="text-center p-4">Members</h1>
+            <table class="table table-hover" id = "members-table">
+                <tbody>
+                  <tr class = "clickable-row" data-href = "">
+                    <td>Akash Wilson M</td> 
+                  </tr>
+                  <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/134e7bOOBOrqUwQ8xZVNU8TZxQNf8dy1M/view?usp=drivesdk">
+                    <td>Aravind I M</td>
+                  </tr>
+                  <tr class = "clickable-row" data-href = "https://drive.google.com/file/d/1Ywxqglgtpxg1d0S1Bh305u83bbqf0yzk/view?usp=sharing">
+                    <td>Harimurali J</td>
+                  </tr>
+                  <tr class = "clickable-row" data-href = "">
+                    <td>Panesa Teja</td>
+                  </tr>
+                </tbody>
+            </table>
           </div>
           <div id="resources-page" class="page container-fluid">
-              This is resources page
+            <h1 id="resources-title" class="text-center p-4">Resources</h1>
+            <p class="resources-content">Coming Soon!</p>
           </div>
           <div id="contact-page" class="page container-fluid">
               This is contact page
@@ -104,6 +140,11 @@
                             $(".page").hide();
                             $("#contact-page").show();
                         });
+            $(".clickable-row").click(function() {
+                            //window.location = $(this).data("href");
+                            //window.open($(this).data("href"), 'targetWindow');
+                            window.open($(this).data("href"));
+                        });            
         </script>
   </body>
 </html>
