@@ -19,7 +19,7 @@
             }
 
             #page-frame {
-                height: 100vh;
+                height: calc(100vh - 5vw);
                 width: 100vw;
             }
 
@@ -131,26 +131,30 @@
                             $("#home-nav").addClass("active");
                             $(".page").hide();
                             $("#home-page").show();
+                            $(".navbar-collapse").collapse("hide");
                         });
             $("#members-nav").click( () => {
                             $(".nav-link").removeClass("active");
                             $("#members-nav").addClass("active");
                             $(".page").hide();
                             $("#members-page").show();
+                            $(".navbar-collapse").collapse("hide");
                         });
             $("#resources-nav").click( () => {
                             $(".nav-link").removeClass("active");
                             $("#resources-nav").addClass("active");
                             $(".page").hide();
                             $("#resources-page").show();
+                            $(".navbar-collapse").collapse("hide");
                         });
             $("#contact-nav").click( () => {
                             $(".nav-link").removeClass("active");
                             $("#contact-nav").addClass("active");
                             $(".page").hide();
                             $("#contact-page").show();
+                            $(".navbar-collapse").collapse("hide");
                         });
-            $(".clickable-row").click(function() {
+            $(".clickable-row").click(() => {
                             //window.location = $(this).data("href");
                             //window.open($(this).data("href"), 'targetWindow');
                             window.open($(this).data("href"));
