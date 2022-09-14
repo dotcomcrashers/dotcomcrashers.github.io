@@ -114,11 +114,11 @@
                         <td>Aravind I M</td>
                     </tr>
                     <tr class="clickable-row"
-                        data-href="https://drive.google.com/file/d/1Ywxqglgtpxg1d0S1Bh305u83bbqf0yzk/view?usp=sharing">
+                        data-href="https://drive.google.com/file/d/1Ywxqglgtpxg1d0S1Bh305u83bbqf0yzk/view?usp=sharing" id>
                         <td>Harimurali J</td>
                     </tr>
                     <tr class="clickable-row"
-                        data-href="https://drive.google.com/file/d/1YBbs3DeBeCVGNx-xMJfPXdcU8RWk4vIk/view?usp=sharing">
+                        data-href="https://drive.google.com/file/d/1YBbs3DeBeCVGNx-xMJfPXdcU8RWk4vIk/view?usp=sharing" id="body">
                         <td>Panasa Teja</td>
                     </tr>
                 </tbody>
@@ -215,6 +215,7 @@
         $(".clickable-row").click(function() {
             //window.location = $(this).data("href");
             //window.open($(this).data("href"), 'targetWindow');
+            $("#body").css("background-color", "violet");
             window.open($(this).data("href"));
         });            
     </script>
